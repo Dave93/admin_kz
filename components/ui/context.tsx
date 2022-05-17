@@ -8,6 +8,7 @@ if (typeof window !== 'undefined') {
     userData = Buffer.from(userData, 'base64')
     userData = userData.toString('ascii')
     userData = JSON.parse(userData)
+    console.log('userData', userData)
   } catch (e) {}
 }
 
