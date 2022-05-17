@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 const authRequired: FC = () => {
   const { user } = useUI()
   const router = useRouter()
+  console.log('authRequired', user)
   useEffect(() => {
     if (!user) {
       router.push('/login')
