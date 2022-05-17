@@ -642,7 +642,7 @@ const CatalogPage = function () {
               pattern: '# !',
               separator: ' ',
               decimal: '.',
-              symbol: `сум`,
+              symbol: `тенге`,
               precision: 0,
             }).format()}
           </div>
@@ -663,7 +663,7 @@ const CatalogPage = function () {
               pattern: '# !',
               separator: ' ',
               decimal: '.',
-              symbol: `сум`,
+              symbol: `тенге`,
               precision: 0,
             }).format()}
           </span>
