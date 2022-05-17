@@ -140,6 +140,8 @@ const CatalogPage = function () {
     },
   }
 
+  const otpToken = Cookies.get('opt_token')
+
   const dropProps = {
     name: 'file',
     multiple: true,
@@ -189,7 +191,10 @@ const CatalogPage = function () {
       formData.append('parent_id', hashids.encode(selectedProducts[0].id))
 
       const config = {
-        headers: { 'content-type': 'multipart/form-data' },
+        headers: {
+          'content-type': 'multipart/form-data',
+          Authorization: `Bearer ${otpToken}`,
+        },
         onUploadProgress: (event: any) => {
           const percent: number = Math.floor((event.loaded / event.total) * 100)
           const progress: UploadProgressEvent = { ...event, percent }
