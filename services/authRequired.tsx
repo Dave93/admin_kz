@@ -5,7 +5,6 @@ import { useRouter } from 'next/router'
 const authRequired: FC = () => {
   const { user } = useUI()
   const router = useRouter()
-  console.log('authRequired', typeof user)
 
   let userData = user
 
@@ -16,6 +15,7 @@ const authRequired: FC = () => {
   }
 
   useEffect(() => {
+    console.log('userData', userData)
     if (!userData) {
       router.push('/login')
     } else {
@@ -35,7 +35,7 @@ const authRequired: FC = () => {
       router.push('/login')
     }
   }*/
-  }, [user, router])
+  }, [user, router, userData])
   return user
 }
 
