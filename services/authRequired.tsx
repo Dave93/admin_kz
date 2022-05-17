@@ -15,7 +15,6 @@ const authRequired: FC = () => {
   }
 
   useEffect(() => {
-    console.log('userData', userData)
     if (!userData) {
       router.push('/login')
     } else {
