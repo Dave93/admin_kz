@@ -561,6 +561,13 @@ const Terminals = () => {
                 </Col>
               </Row>
               <Row gutter={16}>
+                <Col span={24}>
+                  <Form.Item name="polygons" label="Область доставки">
+                    <Input.TextArea />
+                  </Form.Item>
+                </Col>
+              </Row>
+              <Row gutter={16}>
                 <Col span={12}>
                   <Form.Item name="open_work" label="Время открытия (ПН-СБ)">
                     <TimePicker format={format} />
